@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>SimAngle Beta Testing</title>
+    <style>
+        :root { --accent: #5abdf0; --amber: #fbbf24; --text: #f8fafc; --muted: #9ba8bc; --line: rgba(255,255,255,.1); }
+        * { box-sizing: border-box; }
+        body { margin: 0; min-height: 100vh; padding: 40px 16px 64px; font-family: Roboto, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.7; color: var(--text); background: radial-gradient(circle at top, #254565 0%, #03182f 50%, #000814 100%) fixed; }
+        .container { max-width: 820px; margin: 0 auto; padding: 40px 32px; border-radius: 30px; background: rgba(255,255,255,.05); border: 1px solid var(--line); backdrop-filter: blur(20px); box-shadow: 0 20px 50px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.1); }
+        header { display: flex; align-items: center; gap: 22px; padding-bottom: 28px; margin-bottom: 8px; border-bottom: 1px solid var(--line); }
+        .logo { flex: 0 0 auto; width: 88px; height: 88px; border-radius: 20px; box-shadow: 0 10px 30px rgba(31,143,255,.45); }
+        .brand { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+        h1 { margin: 0; font-size: 30px; font-weight: 600; letter-spacing: 1px; color: #fff; }
+        .updated { margin: 6px 0 0; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: 2px; }
+        h2 { margin: 34px 0 10px; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+        p { margin: 10px 0; color: #e2e8f0; }
+        ul { margin: 10px 0; padding-left: 0; list-style: none; }
+        li { position: relative; padding-left: 22px; margin: 6px 0; color: #e2e8f0; }
+        li::before { content: ""; position: absolute; left: 0; top: .75em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+        .highlight { margin: 22px 0; padding: 18px 22px; border-radius: 20px; background: rgba(90,189,240,.08); border: 1px solid rgba(90,189,240,.3); }
+        .highlight p { margin: 0; font-weight: 600; color: #fff; }
+        .platform { margin-top: 18px; padding: 18px 20px; border-radius: 20px; background: rgba(255,255,255,.04); border: 1px solid var(--line); }
+        .platform h3 { margin: 0 0 8px; color: #fff; font-size: 18px; }
+        .badge-link { display: inline-flex; margin-top: 8px; border: 0; }
+        .badge-link img { height: 56px; width: auto; display: block; }
+        .button-link { display: inline-block; margin-top: 12px; padding: 12px 18px; border-radius: 12px; border: 1px solid rgba(90,189,240,.45); color: #fff; text-decoration: none; background: rgba(31,143,255,.18); }
+        .button-link:hover { background: rgba(31,143,255,.28); }
+        .links { margin-top: 22px; padding: 20px 24px; border-radius: 20px; background: rgba(255,255,255,.04); border: 1px solid var(--line); }
+        a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(90,189,240,.4); }
+        a:hover { border-bottom-color: var(--accent); }
+        footer { margin-top: 40px; text-align: center; color: var(--muted); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+        @media (max-width: 520px) { .container { padding: 28px 20px; border-radius: 22px; } header { flex-direction: column; align-items: flex-start; gap: 16px; } h1 { font-size: 26px; } .badge-link img { height: 52px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+<svg class="logo" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SimAngle logo" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bgGlow" cx="28%" cy="18%" r="100%">
+      <stop offset="0" stop-color="#254565"/>
+      <stop offset="0.45" stop-color="#03182f"/>
+      <stop offset="1" stop-color="#000814"/>
+    </radialGradient>
+    <linearGradient id="blueGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#dceff8"/>
+      <stop offset="0.45" stop-color="#5abdf0"/>
+      <stop offset="1" stop-color="#1f8fff"/>
+    </linearGradient>
+    <linearGradient id="whiteGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d8d8d8"/>
+    </linearGradient>
+    <linearGradient id="innerDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00162c"/>
+      <stop offset="1" stop-color="#032244"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="224" ry="224" fill="url(#bgGlow)"/>
+  <rect x="45" y="45" width="934" height="934" rx="190" fill="none" stroke="#36516b" stroke-width="4" opacity="0.8"/>
+  <g transform="translate(512 512) scale(1.05) translate(-520 -430)">
+    <path fill="url(#whiteGrad)" d="M370 184 H695 L614 265 H455 C405 265 362 304 360 341 C358 370 377 392 412 392 H557 L474 480 H334 C256 480 211 423 211 368 C211 303 255 236 328 196 C342 189 355 185 370 184 Z"/>
+    <circle cx="718" cy="319" r="40" fill="none" stroke="#2e97ff" stroke-width="22"/>
+    <circle cx="718" cy="319" r="48" fill="none" stroke="#1179eb" stroke-width="4" opacity="0.8"/>
+    <path fill="url(#blueGrad)" d="M286 676 L612 348 L830 676 Z"/>
+    <path fill="url(#innerDark)" d="M438 603 L608 438 L718 603 Z"/>
+  </g>
+</svg>
+            <div>
+                <p class="brand">SimAngle</p>
+                <h1>Beta Testing</h1>
+                <p class="updated">Last updated: 10 October 2026</p>
+            </div>
+        </header>
+
+        <p>Thanks for helping test SimAngle before full release. Use the platform links below to install the latest beta and share feedback.</p>
+
+        <h2>What SimAngle does</h2>
+        <p>SimAngle is a lightweight setup companion for sim-racing and desktop enthusiasts. It combines practical setup tools in one app so you can tune your driving position and display configuration quickly, without switching between multiple utilities.</p>
+        <ul>
+            <li>Digital spirit level and angle finder using your device motion sensors</li>
+            <li>Guided measurement modes to help you hold and orient your device correctly</li>
+            <li>Field-of-view (FOV) calculator to support realistic in-game camera setup</li>
+            <li>Offline-first design with no account required for core functionality</li>
+        </ul>
+
+        <h2>Why we are running a beta</h2>
+        <p>Testing on real devices and real setups helps us validate sensor behavior, calculation reliability, and usability before public release. Your feedback helps us find edge cases, improve clarity, and prioritize the most valuable fixes.</p>
+
+        <div class="highlight"><p>Store badges below are official assets from Google and Apple resources, used without logo edits.</p></div>
+
+        <h2>Install the Beta</h2>
+
+        <section class="platform">
+            <h3>Android Beta</h3>
+            <p>Join the Google Play testing track and install SimAngle from the Play Store beta channel.</p>
+            <a class="badge-link" href="https://play.google.com/apps/testing/com.quickangle.app" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+            </a>
+        </section>
+
+        <section class="platform">
+            <h3>iPhone &amp; iPad Beta</h3>
+            <p>Install TestFlight first, then open the SimAngle TestFlight invite.</p>
+            <a class="badge-link" href="https://apps.apple.com/us/app/testflight/id899247664?mt=8" target="_blank" rel="noopener noreferrer" aria-label="Download TestFlight on the App Store">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+            <br>
+            <a class="button-link" href="https://testflight.apple.com/join/yrNTxDBs" target="_blank" rel="noopener noreferrer">Open SimAngle in TestFlight</a>
+        </section>
+
+        <h2>What to test</h2>
+        <p>Please focus on everyday usage and let us know where things feel unclear, slow, or inaccurate. Practical feedback from your own rig and device is the most valuable.</p>
+        <ul>
+            <li>Angle and spirit level responsiveness across different device orientations and surfaces</li>
+            <li>FOV calculations using your own setup dimensions and expected in-game results</li>
+            <li>Switching between tools and measurement modes during a normal setup session</li>
+            <li>Usability, readability, and any crashes or unexpected app behavior</li>
+        </ul>
+
+        <div class="links">
+            <p><strong>Need help?</strong> Visit <a href="Support.html">Support</a>.</p>
+            <p><strong>Privacy details:</strong> Read the <a href="PrivacyPolicy.html">Privacy Policy</a>.</p>
+        </div>
+
+        <footer>SimAngle Beta Program</footer>
+    </div>
+</body>
+</html>
